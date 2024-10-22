@@ -46,7 +46,7 @@ Note notes[] = {
   {NOTE_D4, 0.75, 'D', false, 4}, {NOTE_E4, 0.25, 'E', false, 4}, {NOTE_F4, 0.5, 'F', false, 4}, {REST, 0.5, 'R', false, -1}, 
   {NOTE_F4, 2, 'F', false, 4}, {NOTE_DS4, 0.75, 'D', true, 4}, {NOTE_F4, 0.25, 'F', false, 4}, {NOTE_G4, 0.5, 'G', false, 4}, 
   {REST, 0.5, 'R', false, -1}, {NOTE_G4, 2, 'G', false, 4}, {NOTE_F4, 1.5, 'F', false, 4}, {NOTE_AS4, 0.5, 'A', true, 4}, 
-  {NOTE_AS4, 1, 'A', true, 4}, {NOTE_C5, 3, 'C', false, 5}, {NOTE_D5, 1, 'D', false, 5}, {NOTE_D5, 2, 'D', false, 5},
+  {NOTE_AS4, 1, 'A', true, 4}, {NOTE_C5, 3, 'C', false, 5}, {NOTE_D5, 1, 'D', false, 5}, {NOTE_D5, 2, 'D', false, 5}, // "의에 죽고 찬에 삶이 모교의 정신"
   
   {NOTE_D5, 2, 'D', false, 5}, {NOTE_D5, 0.5, 'D', false, 5}, {NOTE_D5, 0.5, 'D', false, 5}, {NOTE_C5, 0.5, 'C', false, 5}, 
   {NOTE_D5, 0.5, 'D', false, 5}, {NOTE_DS5, 3, 'D', true, 5}, {NOTE_DS5, 0.75, 'D', true, 5}, {NOTE_DS5, 0.25, 'D', true, 5}, 
@@ -55,14 +55,6 @@ Note notes[] = {
 
 };
 
-bool isSharpOrFlat[] = {
-  1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, // "남산이 영을 넘어 바라보이고" / "삼천리 이강산에 꽃을 피우려"
-  0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, // "뒤로는 관악산이 높이 솟았네" / "군세고 지혜롭게 모여들었네"
-  0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, // "강수구 비치는 노들강변" / "선미가 특한 말 길려온 정"
-  1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, // "대숲결 속에 우뚝 솟은 중앙" / "세계를 누리위해 몸 바친 중앙"
-  0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, // "의에 죽고 찬에 삶이 모교의 정신"
-  0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0  // "예빛내세 우리중앙대학교"
-};
 // State variables
 volatile bool isPlaying = false; // Use volatile for variables accessed in ISRs
 int currentNote = 0;
